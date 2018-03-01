@@ -1,0 +1,29 @@
+
+import numpy as np
+def sigmoid(z):
+    return 1.0/(1.0+np.exp(-z))
+-----------------------------------------------------
+L1
+
+import numpy as np
+def L1(xhat, x):
+    return np.sum(np.absolute(xhat - x))
+----------------------------------------------------------------
+L2
+
+import numpy as np
+def L2(yhat, y):
+    return np.sum((yhat - y)**2)
+
+
+-----------------------------------------------------------------
+
+					
+import numpy as np
+from sklearn.preprocessing import normalize
+matrix = numpy.arange(0,20,4).reshape(4,4).astype(numpy.float64)
+
+
+
+normed_matrix = normalize(matrix, axis=1, norm='l1')
+
